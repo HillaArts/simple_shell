@@ -17,6 +17,7 @@ void execute_command(char *input, char **envp)
         write(STDERR_FILENO, "Error: Command not found\n", sizeof("Error: Command not found\n") - 1);
         write(STDERR_FILENO, input, _strlen(input));
         write(STDERR_FILENO, "\n", 1);
+        free(command_path);
         return;
     }
 
@@ -24,6 +25,7 @@ void execute_command(char *input, char **envp)
     if (child_pid == -1) {
         char error[] = "Error: fork\n";
         write(STDERR_FILENO, error, sizeof(error) - 1);
+        free(command_path);
         exit(EXIT_FAILURE);
     }
 
@@ -57,16 +59,19 @@ void execute_command(char *input, char **envp)
                 write(STDOUT_FILENO, "\n", 1);
                 env++;
             }
+            free(command_path);
             exit(EXIT_SUCCESS);
         } else if (my_strcmp(input, "ls") == 0 || my_strcmp(input, "/bin/ls") == 0) {
             char *ls_args[] = {"/bin/ls", NULL};
             execve(ls_args[0], ls_args, envp);
             write(STDERR_FILENO, "Error: execve\n", sizeof("Error: execve\n") - 1);
+            free(command_path);
             exit(EXIT_FAILURE);
         }
 
         if (execve(command, args, envp) == -1) {
             write(STDERR_FILENO, "Error: No such file or directory\n", sizeof("Error: No such file or directory\n") - 1);
+            free(command_path);
             exit(EXIT_FAILURE);
         }
     } else {
@@ -83,9 +88,6 @@ void execute_command(char *input, char **envp)
             error_message_signal[30] = '0' + signal_code % 10;
             write(STDERR_FILENO, error_message_signal, sizeof(error_message_signal) - 1);
         }
-    }
-
-    if (command_path != NULL) {
         free(command_path);
     }
 }
