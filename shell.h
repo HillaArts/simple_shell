@@ -11,7 +11,6 @@
 #define BUFFER_SIZE 1024
 #define MAX_INPUT 1024
 #define PATH_BUFFER_SIZE 1024
-#define MAX_ARGS 1024
 
 extern char **environ;
 
@@ -25,8 +24,4 @@ int _strlen(const char *str);
 void execute_env(void);
 void execute_command(char *input, char **envp);
 int my_strcmp(const char *str1, const char *str2);
-int setenv_command(const char *variable, const char *value);
-int unsetenv_command(const char *variable);
-char **split_input(char *input);
-char *_strdup(const char *s);
 #endif /* _SHELL_H */

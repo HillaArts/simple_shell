@@ -57,24 +57,3 @@ int my_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (*s1 - *s2);
 }
-
-
-/**
- * _strdup - Duplicates a string.
- * @s: The string to duplicate.
- *
- * Return: A pointer to the newly allocated duplicated string.
- */
-char *_strdup(const char *s)
-{
-	size_t len = _strlen(s) + 1;
-	char *duplicate = (char *)malloc(len);
-
-	if (s == NULL)
-	return (NULL);
-
-	if (duplicate == NULL)
-	return (NULL);
-
-	return (_strcpy(duplicate, s));
-}
