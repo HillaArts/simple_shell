@@ -10,7 +10,7 @@ void execute_env(void)
 
 	while (env_var != NULL)
 	{
-		len = strlen(env_var);
+		len = _strlen(env_var);
 		write(STDOUT_FILENO, env_var, len);
 		write(STDOUT_FILENO, "\n", 1);
 		env_var = *(++environ);
