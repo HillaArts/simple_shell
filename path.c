@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * get_command_path - Search for the command in the PATH.
  * @command: The command to search in the PATH.
