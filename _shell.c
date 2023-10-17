@@ -28,7 +28,7 @@ int main(int argc, char **argv, char **envp)
 	}
 	else
 	{
-		char error[] = "Error: getline/n";
+		char error[] = "Error: getline\n";
 		
 		write(STDERR_FILENO, error, sizeof(error) - 1);
 		exit(127);
