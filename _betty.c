@@ -1,19 +1,10 @@
 #include "shell.h"
 /**
- * _putchar - prints _putchar
- * @c: char
- * Return: 0 (Success)
+ * _putchar - prints "_putchar" followed by a newline character
  */
-int _putchar(char c)
+void _putchar(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-	return (0);
+	char str[] = "_putchar\n";
+	write(1, str, sizeof(str) - 1);
 }
+
