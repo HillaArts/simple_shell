@@ -23,5 +23,12 @@ char *my_getline(void);
 int _strlen(const char *str);
 void execute_env(void);
 void execute_command(char *input, char **envp);
+void error_command_not_found(char *input);
+void error_fork();
+void error_execve();
+void error_no_such_file();
+void execute_external_command(char *input, char **envp, char *command_path);
+void execute_builtin_command(char *command, char **envp);
+int is_builtin_command(char *input);
 int my_strcmp(const char *str1, const char *str2);
 #endif /* _SHELL_H */
