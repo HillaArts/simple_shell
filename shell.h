@@ -36,4 +36,5 @@ char *my_strtok(char *str, const char *delim);
 int my_delim(char c, const char *delim);
 int my_strncmp(const char *s1, const char *s2, size_t n);
 void exitshell(char **command);
+char **split(char *buff, const char *s);
 #endif
