@@ -24,5 +24,11 @@ unsigned int my_strlen(const char *s);
 int my_strcmp(const char *s1, const char *s2);
 void _env(char **env);
 void my_fprintf(FILE *stream, const char *format, ...);
-
+void execute_command(char **command, char *name, char **env, int cycles);
+void find_command(char **env, char **command, char *name, int cycles);
+char **my_getpath(char **env, char **command);
+pid_t getpid(void);
+void printenv(char **env);
+void free_exit(char **command);
+void _free(char **command);
 #endif

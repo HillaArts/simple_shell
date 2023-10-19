@@ -41,7 +41,7 @@ int my_strcmp(const char *s1, const char *s2)
  * @...: Variable number of arguments to be formatted and printed
  * Description: This function mimics the behavior of fprintf by taking
  * a format string and a variable number of arguments and printing
- * the formatted output to the specified stream.
+ * the formatted output to the specified stream
  */
 void my_fprintf(FILE *stream, const char *format, ...)
 {
