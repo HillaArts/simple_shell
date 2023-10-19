@@ -45,11 +45,11 @@ int my_strcmp(const char *s1, const char *s2)
  */
 void my_fprintf(FILE *stream, const char *format, ...)
 {
-        va_list args;
+	va_list args;
 
-        va_start(args, format);
-        vfprintf(stream, format, args);
-        va_end(args);
+	va_start(args, format);
+	vfprintf(stream, format, args);
+	va_end(args);
 }
 /**
  * token_finder - function helps finding the next non-delimiter character

@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * handle - function to handle Ctr + C signal
+ * _handle - function to handle Ctr + C signal
  * @signals: signal to handle
  */
 void _handle(int signals)

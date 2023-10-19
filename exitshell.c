@@ -2,7 +2,6 @@
 /**
  * exitshell - exiting shell function
  * @command: spliting command pointer
- * Return: 
  */
 void exitshell(char **command)
 {

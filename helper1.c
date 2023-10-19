@@ -41,7 +41,7 @@ int my_atoi(char *s)
 	return (total);
 }
 /**
- * my _strcat - function that concatenates two strings
+ * my_strcat - function that concatenates two strings
  * @dest: input string
  * @src: input string
  * Return: pointer to the resulting string
@@ -51,8 +51,9 @@ char *my_strcat(char *dest, const char *src)
 	char *temp = dest;
 
 	while (*dest)
+	{
 		dest++;
-
+	}
 	while (*src)
 	{
 		*dest = *src;

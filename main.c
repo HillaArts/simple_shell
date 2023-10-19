@@ -11,7 +11,7 @@ int main(int ac, char **av, char **env)
 	int cycles = 0;
 	char *buff = NULL;
 	size_t buf_size = 0;
-	ssize_t char_read = 0;;
+	ssize_t char_read = 0;
 	(void)ac;
 
 	while (1)

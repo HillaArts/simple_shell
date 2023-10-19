@@ -8,7 +8,7 @@
 char **spliting(char *buff, const char *s)
 {
 	char *split = NULL;
-        char **commands = NULL;
+	char **commands = NULL;
 	int i = 0;
 	size_t bufsize = 0;
 

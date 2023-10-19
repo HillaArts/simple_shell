@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * execute - function that executes a command
+ * execute_command - function that executes a command
  * @command: pointer to tokienized command
  * @name: name of the shell
  * @env: pointer to the enviromental variables
