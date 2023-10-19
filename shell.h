@@ -8,6 +8,8 @@
 #include <string.h>
 #include <stddef.h>
 #include <stdarg.h>
+#include <sys/stat.h>
+
 
 #define BUFFER_SIZE 1024
 #define MAX_INPUT 1024

@@ -59,7 +59,7 @@ void my_fprintf(FILE *stream, const char *format, ...)
  */
 char *token_finder(char *str, const char *delim)
 {
-	while (*str && is_delim(*str, delim))
+	while (*str && my_delim(*str, delim))
 	{
 		str++;
 	}

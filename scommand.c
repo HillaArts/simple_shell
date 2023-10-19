@@ -14,14 +14,14 @@ void command_shell(char *buff, char **av, char **env, int cycles)
 
 	buff[my_strlen(buff) - 1] = '\0';
 
-	command = tokening(buff, " \0");
+	command = spliting(buff, " \0");
 
 	free(buff);
 
 	if (command && command[0])
 	{
 		if (my_strcmp(command[0], "exit") != 0)
-			shell_exit(command);
+			exitshell(command);
 		else if (my_strcmp(command[0], "cd") != 0)
 			chdir(command[1]);
 		else if (my_strcmp(command[0], "env") != 0)

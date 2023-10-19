@@ -35,7 +35,7 @@ char **my_getpath(char **env, char **command)
 				pathvalue[len - 1] = '\0';
 				len--;
 			}
-			pathways = tokening(pathvalue, ":");
+			pathways = spliting(pathvalue, ":");
 			return (pathways);
 		}
 		i++;
