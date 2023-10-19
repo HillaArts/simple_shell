@@ -12,7 +12,7 @@ void command_shell(char *buff, char **av, char **env, int cycles)
 {
 	char **command = NULL;
 
-	buff[_strlen(buff) - 1] = '\0';
+	buff[my_strlen(buff) - 1] = '\0';
 
 	command = tokening(buff, " \0");
 

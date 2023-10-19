@@ -21,6 +21,8 @@ int my_atoi(char *s);
 char *my_strcat(char *dest, const char *src);
 char *my_strcpy(char *dest, const char *src);
 unsigned int my_strlen(const char *s);
-int _strcmp(const char *s1, const char *s2);
+int my_strcmp(const char *s1, const char *s2);
+void _env(char **env);
+void my_fprintf(FILE *stream, const char *format, ...);
 
 #endif

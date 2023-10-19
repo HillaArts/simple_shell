@@ -18,7 +18,7 @@ int main(int ac, char **av, char **env)
 	{
 		cycles++;
 		prompt();
-		signal(SIGINT, handle);
+		signal(SIGINT, _handle);
 		char_read = getline(&buff, &buf_size, stdin);
 		if (char_read == EOF)
 			_EOF(buff);
@@ -26,7 +26,7 @@ int main(int ac, char **av, char **env)
 			free(buff);
 		else
 		{
-			shell_command(buff, av, env, cycles);
+			command_shell(buff, av, env, cycles);
 		}
 		fflush(stdin);
 		buff = NULL, buf_size = 0;
