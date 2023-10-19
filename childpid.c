@@ -20,7 +20,7 @@ void createchild(char **command, char *name, char **env, int cycles)
 	}
 	else if (pid == 0)
 	{
-		execute(command, name, env, cycles);
+		execute_command(command, name, env, cycles);
 		_free(command);
 	}
 	else

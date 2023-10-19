@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * chdir - function that changes working directory
+ * chDIR - function that changes working directory
  * @path: new current working directory
  * Return: 1
  */
-int chdir(const char *path)
+int chDIR(const char *path)
 {
 	char *buff = NULL;
 	size_t size = 1024;
@@ -13,7 +13,7 @@ int chdir(const char *path)
 	{
 		path = getcwd(buff, size);
 	}
-	if (chdir(path) == -1)
+	if (chDIR(path) == -1)
 	{
 		perror(path);
 		return (98);

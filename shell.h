@@ -40,6 +40,7 @@ int my_delim(char c, const char *delim);
 int my_strncmp(const char *s1, const char *s2, size_t n);
 void exitshell(char **command);
 char **spliting(char *buff, const char *s);
-int chdir(const char *path);
+int chDIR(const char *path);
+void msgerror(char *name, int cycles, char **command);
 
 #endif
