@@ -1,12 +1,11 @@
 #include "shell.h"
-
 /**
- * split - function use for spliting and make full string command
+ * spliting - function use for spliting and make full string command
  * @buff: The pointer to input string
  * @s: The delimiter for strtok
  * Return: string
  */
-char **split(char *buff, const char *s)
+char **spliting(char *buff, const char *s)
 {
 	char *split = NULL;
         char **commands = NULL;

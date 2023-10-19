@@ -7,6 +7,7 @@
 #include <sys/wait.h>
 #include <string.h>
 #include <stddef.h>
+#include <stdarg.h>
 
 #define BUFFER_SIZE 1024
 #define MAX_INPUT 1024
@@ -36,5 +37,7 @@ char *my_strtok(char *str, const char *delim);
 int my_delim(char c, const char *delim);
 int my_strncmp(const char *s1, const char *s2, size_t n);
 void exitshell(char **command);
-char **split(char *buff, const char *s);
+char **spliting(char *buff, const char *s);
+int chdir(const char *path);
+
 #endif

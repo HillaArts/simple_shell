@@ -64,7 +64,6 @@ int my_delim(char c, const char *delim)
  * @n: ....
  * Return: ...
  */
-
 int my_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (n > 0 && *s1 && *s2)

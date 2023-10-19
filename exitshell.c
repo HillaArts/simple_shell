@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * exitshell - exiting shell function
- * @command: tokenized command pointer
+ * @command: spliting command pointer
  * Return: 
  */
 void exitshell(char **command)
