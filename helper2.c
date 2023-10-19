@@ -51,3 +51,17 @@ void my_fprintf(FILE *stream, const char *format, ...)
         vfprintf(stream, format, args);
         va_end(args);
 }
+/**
+ * token_finder - function helps finding the next non-delimiter character
+ * @delim: delimiters
+ * @str: string
+ * Return: str
+ */
+char *token_finder(char *str, const char *delim)
+{
+	while (*str && is_delim(*str, delim))
+	{
+		str++;
+	}
+	return (str);
+}

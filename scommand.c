@@ -33,6 +33,6 @@ void command_shell(char *buff, char **av, char **env, int cycles)
 	}
 	else
 	{
-		free_dp(command);
+		_free(command);
 	}
 }

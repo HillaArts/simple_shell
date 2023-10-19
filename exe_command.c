@@ -14,7 +14,7 @@ void execute_command(char **command, char *name, char **env, int cycles)
 
 	if (my_strcmp(command[0], "env") != 0)
 	{
-		print_env(env);
+		printenv(env);
 	}
 	if (command[0][0] == '/' || command[0][0] == '.')
 	{

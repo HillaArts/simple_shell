@@ -26,7 +26,7 @@ void find_command(char **env, char **command, char *name, int cycles)
 			if (execve(full_path, command, env) < 0)
 			{
 				perror(name);
-				free_dp(pathways);
+				_free(pathways);
 				free_exit(command);
 			}
 			return;
@@ -34,5 +34,5 @@ void find_command(char **env, char **command, char *name, int cycles)
 	}
 
 	msgerror(name, cycles, command);
-	free_dp(pathways);
+	_free(pathways);
 }
